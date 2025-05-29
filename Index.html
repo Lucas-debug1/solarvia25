@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Economize com Energia Solar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #d4edda, #f0fff0);
+      color: #003300;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      position: relative;
+      background-image: url('2009564_univ_lsr_xl.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+    .hero a button {
+      margin-top: 20px;
+      background-color: #006600;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+    .hero a button:hover {
+      background-color: #004d00;
+    }
+    section, footer {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: linear-gradient(to bottom left, #d0f0d0, #e8ffe8);
+      border-radius: 15px;
+      margin-top: 20px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    section.formulario {
+      background: linear-gradient(to bottom right, #c9f7c9, #e8ffe8);
+    }
+    .simulador input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #003300;
+      border-radius: 25px;
+      background: linear-gradient(to right, #e8f5e9, #ffffff);
+    }
+    .resultado {
+      font-weight: bold;
+      color: #006600;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #003300;
+      border-radius: 25px;
+      background: linear-gradient(to right, #e8f5e9, #ffffff);
+    }
+    form button {
+      background-color: #006600;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #004d00;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .whatsapp-button img {
+      width: 60px;
+      height: 60px;
+    }
+    .mensagem-sucesso {
+      display: none;
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Reduza sua conta de luz</h1>
+      <p>Simule agora e descubra quanto você pode economizar!</p>
+      <a href="#simulador"><button>Simule sua Economia</button></a>
+    </div>
+  </div>
+
+  <section id="simulador" class="simulador">
+    <h2>Simulador de Economia</h2>
+    <label for="conta">Informe o valor da sua conta de luz (R$):</label>
+    <input type="number" id="conta" placeholder="Ex: 300">
+    <p class="resultado" id="resultado"></p>
+  </section>
+
+  <section class="formulario">
+    <h2>Solicite sua Proposta</h2>
+    <form id="formulario" action="https://formsubmit.co/conexao.solarvia@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://sua-landingpage.com/obrigado.html">
+      <input type="text" name="nome" placeholder="Nome completo" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="tel" name="telefone" placeholder="Telefone" required>
+      <input type="text" name="endereco" placeholder="Endereço">
+      <label>Anexar documento ou foto:</label>
+      <input type="file" name="anexo">
+      <button type="submit">Enviar</button>
+      <p class="mensagem-sucesso" id="mensagemSucesso">Formulário enviado com Sucesso, aguarde o contato!</p>
+    </form>
+  </section>
+
+  <footer style="background-color: rgba(204, 255, 204, 0.9); text-align: center; color: #003300;">
+    <p>&copy; 2025 lucasdebug. Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/558140429370" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Fale conosco no WhatsApp">
+  </a>
+
+  <script>
+    const input = document.getElementById('conta');
+    const resultado = document.getElementById('resultado');
+
+    input.addEventListener('input', () => {
+      const valor = parseFloat(input.value);
+      if (!isNaN(valor)) {
+        const economia = (valor * 0.2 * 12).toFixed(2);
+        resultado.textContent = `Você pode economizar aproximadamente R$ ${economia} por ano!`;
+      } else {
+        resultado.textContent = '';
+      }
+    });
+
+    document.getElementById('formulario').addEventListener('submit', function(e) {
+      document.getElementById('mensagemSucesso').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
