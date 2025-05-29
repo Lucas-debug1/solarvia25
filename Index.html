@@ -38,6 +38,11 @@
       position: relative;
       z-index: 2;
     }
+    .hero-content img.logo {
+      max-width: 160px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 8px rgba(255,255,255,0.7));
+    }
     .hero h1 {
       font-size: 2.5em;
       margin-bottom: 0.5em;
@@ -141,10 +146,11 @@
 <body>
   <div class="hero">
     <div class="hero-content">
-      <h1>Reduza sua conta de luz</h1>
-      <p>Simule agora e descubra quanto você pode economizar!</p>
-      <a href="#simulador"><button>Simule sua Economia</button></a>
-    </div>
+  <img src="logo.png" alt="Logo Solarvia" style="width: 120px; margin-bottom: 20px;">
+  <h1>Reduza sua conta de luz</h1>
+  <p>Simule agora e descubra quanto você pode economizar!</p>
+  <a href="#simulador"><button>Simule sua Economia</button></a>
+</div>
   </div>
 
   <section id="simulador" class="simulador">
