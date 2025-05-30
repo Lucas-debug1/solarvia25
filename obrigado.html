@@ -17,14 +17,15 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start; /* subimos os elementos */
       align-items: center;
       text-align: center;
       backdrop-filter: brightness(0.6);
+      padding-top: 60px; /* espaço no topo */
     }
     .logo {
-      width: 120px;
-      margin-bottom: 20px;
+      width: 160px; /* aumentada de 120px para 160px */
+      margin-bottom: 30px;
       filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
     }
     h1 {
@@ -53,7 +54,7 @@
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Logo Solarvia" class="logo">  <! -- meu deus do céu -- >
+  <img src="logo.png" alt="Logo Solarvia" class="logo">
   <h1>Obrigado pelo seu contato!</h1>
   <p>Recebemos suas informações e entraremos em contato em breve.</p>
   <a href="index.html"><button>Voltar para a página inicial</button></a>
