@@ -162,7 +162,7 @@
 
   <section class="formulario">
     <h2>Solicite sua Proposta</h2>
-    <form action="https://formsubmit.co/el/pabiju" method="POST">
+    <form id="formulario" action="https://formsubmit.co/el/pabiju" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://lucas-debug1.github.io/solarvia25/obrigado.html">
       <input type="text" name="nome" placeholder="Nome completo" required>
@@ -196,10 +196,6 @@
       } else {
         resultado.textContent = '';
       }
-    });
-
-    document.getElementById('formulario').addEventListener('submit', function(e) {
-      document.getElementById('mensagemSucesso').style.display = 'block';
     });
   </script>
 </body>
