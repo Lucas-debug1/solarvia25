@@ -2,9 +2,13 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Economize com Energia Solar</title>
   <style>
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -13,6 +17,7 @@
       color: #003300;
       scroll-behavior: smooth;
     }
+
     .hero {
       position: relative;
       background-image: url('2009564_univ_lsr_xl.jpg');
@@ -20,10 +25,11 @@
       background-repeat: no-repeat;
       background-size: cover;
       text-align: center;
-      padding: 100px 20px;
+      padding: 80px 20px;
       color: white;
       animation: fadeIn 2s ease-in-out;
     }
+
     .hero::before {
       content: "";
       position: absolute;
@@ -34,24 +40,33 @@
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
       z-index: 1;
     }
+
     .hero-content {
       position: relative;
       z-index: 2;
     }
+
     .hero-content img.logo {
-      max-width: 160px;
-      margin-bottom: 20px;
+      max-width: 150px;
+      margin-bottom: 10px;
+      margin-top: -10px;
       filter: drop-shadow(0 0 8px rgba(255,255,255,0.7));
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
+
     .hero h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
       margin-bottom: 0.5em;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
+
     .hero p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     }
+
     .hero a button {
       margin-top: 20px;
       background-color: #006600;
@@ -63,9 +78,11 @@
       font-size: 1em;
       transition: background-color 0.3s;
     }
+
     .hero a button:hover {
       background-color: #004d00;
     }
+
     section, footer {
       padding: 20px;
       max-width: 800px;
@@ -75,51 +92,51 @@
       margin-top: 20px;
       animation: fadeInUp 1s ease-in-out;
     }
+
     section.formulario {
       background: linear-gradient(to bottom right, #c9f7c9, #e8ffe8);
     }
-    .simulador input {
+
+    .simulador input,
+    form input,
+    form textarea,
+    form select {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       margin: 10px 0;
       border: 1px solid #003300;
       border-radius: 25px;
       background: linear-gradient(to right, #e8f5e9, #ffffff);
+      font-size: 1em;
     }
-    .resultado {
-      font-weight: bold;
-      color: #006600;
-    }
-    form input, form textarea, form select {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #003300;
-      border-radius: 25px;
-      background: linear-gradient(to right, #e8f5e9, #ffffff);
-    }
+
     form button {
       background-color: #006600;
       color: white;
-      padding: 12px;
+      padding: 14px;
       border: none;
       border-radius: 25px;
       width: 100%;
+      font-size: 1em;
       transition: background-color 0.3s;
     }
+
     form button:hover {
       background-color: #004d00;
     }
+
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 1000;
     }
+
     .whatsapp-button img {
       width: 60px;
       height: 60px;
     }
+
     .mensagem-sucesso {
       display: none;
       margin-top: 15px;
@@ -127,10 +144,12 @@
       font-weight: bold;
       text-align: center;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -141,16 +160,74 @@
         transform: translateY(0);
       }
     }
+
+    /* parte do celular */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 15px;
+      }
+
+      .hero h1 {
+        font-size: 1.8em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+
+      .hero-content img.logo {
+        max-width: 120px;
+      }
+
+      .hero a button {
+        width: 90%;
+        font-size: 1em;
+      }
+
+      section, footer {
+        padding: 15px;
+        margin: 15px;
+      }
+
+      .whatsapp-button img {
+        width: 50px;
+        height: 50px;
+      }
+
+      form button {
+        font-size: 1em;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.5em;
+      }
+
+      .hero p {
+        font-size: 0.95em;
+      }
+
+      .hero a button {
+        font-size: 0.95em;
+        padding: 10px 20px;
+      }
+
+      .hero-content img.logo {
+        max-width: 100px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="hero">
     <div class="hero-content">
-  <img src="logo.png" alt="Logo Solarvia" style="width: 120px; margin-bottom: 20px;">
-  <h1>Reduza sua conta de luz</h1>
-  <p>Simule agora e descubra quanto você pode economizar!</p>
-  <a href="#simulador"><button>Simule sua Economia</button></a>
-</div>
+      <img src="logo.png" alt="Logo Solarvia" class="logo">
+      <h1>Reduza sua conta de luz</h1>
+      <p>Simule agora e descubra quanto você pode economizar!</p>
+      <a href="#simulador"><button>Simule sua Economia</button></a>
+    </div>
   </div>
 
   <section id="simulador" class="simulador">
@@ -162,15 +239,17 @@
 
   <section class="formulario">
     <h2>Solicite sua Proposta</h2>
-    <form id="formulario" action="https://formsubmit.co/conexao.solarvia@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="True">
+    <form id="formulario" action="https://formsubmit.co/conexao.solarvia@gmail.com" method="POST" enctype="multipart/form-data" autocomplete="off">
+      <input type="text" name="_honey" style="display:none">
       <input type="hidden" name="_next" value="https://lucas-debug1.github.io/solarvia25/obrigado.html">
+      <input type="hidden" name="_captcha" value="false">
       <input type="text" name="nome" placeholder="Nome completo" required>
       <input type="email" name="email" placeholder="E-mail" required>
       <input type="tel" name="telefone" placeholder="Telefone" required>
       <input type="text" name="endereco" placeholder="Endereço">
       <label>Anexar documento ou foto:</label>
-      <input type="file" name="anexo">
+      <input type="file" name="anexo" accept=".jpg, .jpeg, .png, .pdf">
+
       <button type="submit">Enviar</button>
     </form>
   </section>
@@ -194,6 +273,11 @@
         resultado.textContent = `Você pode economizar aproximadamente R$ ${economia} por ano!`;
       } else {
         resultado.textContent = '';
+      }
+    });
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+        document.getElementById("formulario").reset();
       }
     });
   </script>
