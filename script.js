@@ -1,17 +1,24 @@
-const input = document.getElementById('conta');
-    const resultado = document.getElementById('resultado');
+const input = document.getElementById("conta")
+const resultado = document.getElementById("resultado")
 
-    input.addEventListener('input', () => {
-      const valor = parseFloat(input.value);
-      if (!isNaN(valor)) {
-        const economia = (valor * 0.2 * 12).toFixed(2);
-        resultado.textContent = `Você pode economizar aproximadamente R$ ${economia} por ano!`;
-      } else {
-        resultado.textContent = '';
-      }
-    });
-    window.addEventListener('pageshow', function(event) {
-      if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
-        document.getElementById("formulario").reset();
-      }
-    })
+input.addEventListener("input",()=>{
+
+const valor=parseFloat(input.value)
+
+if(!isNaN(valor)){
+
+const mensal=(valor*0.7).toFixed(2)
+const anual=(mensal*12).toFixed(2)
+
+resultado.innerHTML=
+`Economia estimada:<br>
+R$ ${mensal} por mês<br>
+R$ ${anual} por ano`
+
+}else{
+
+resultado.innerHTML=""
+
+}
+
+})

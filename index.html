@@ -5,10 +5,24 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+
 <title>Economize com Energia Solar | Solarvia</title>
 
 <meta name="description" content="Descubra quanto você pode economizar com energia solar. Faça a simulação gratuita agora.">
+
+<link rel="icon" href="images/logo.png">
+
+<meta http-equiv="Content-Security-Policy"
+content="default-src 'self';
+img-src 'self' https://upload.wikimedia.org data:;
+script-src 'self';
+style-src 'self';
+form-action https://formsubmit.co;">
+
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -21,15 +35,15 @@
 <p>Faça a simulação gratuita e descubra sua economia com energia solar.</p>
 
 <a href="#simulador">
-
 <button class="cta">Simular Economia</button>
-
 </a>
 
 </div>
+
+
 <section>
 
-<h2 style="text-align:center;margin-bottom:40px;">Por que escolher energia solar?</h2>
+<h2 class="titulo">Por que escolher energia solar?</h2>
 
 <div class="beneficios">
 
@@ -52,6 +66,7 @@
 
 </section>
 
+
 <section id="simulador" class="simulador">
 
 <h2>Simule sua Economia</h2>
@@ -64,39 +79,6 @@
 
 </section>
 
-<section class="social">
-
-<h2>Clientes satisfeitos</h2>
-
-<div class="depoimentos">
-
-<div class="depoimento">
-
-<p>"Minha conta caiu de R$420 para R$60."</p>
-
-<strong>— João Silva</strong>
-
-</div>
-
-<div class="depoimento">
-
-<p>"Instalação rápida e economia real."</p>
-
-<strong>— Maria Oliveira</strong>
-
-</div>
-
-<div class="depoimento">
-
-<p>"Melhor investimento que fiz na casa."</p>
-
-<strong>— Carlos Souza</strong>
-
-</div>
-
-</div>
-
-</section>
 
 <section class="formulario">
 
@@ -111,6 +93,7 @@
 <input type="tel" name="telefone" placeholder="Telefone" required>
 
 <input type="hidden" name="_subject" value="Novo Lead Solarvia">
+<input type="hidden" name="_captcha" value="false">
 
 <button type="submit">Quero minha proposta</button>
 
@@ -124,15 +107,17 @@
 
 </footer>
 
+
 <a href="https://wa.me/558140429370?text=Olá,%20quero%20fazer%20uma%20simulação%20de%20energia%20solar."
 class="whatsapp"
-target="_blank">
+target="_blank"
+rel="noopener noreferrer">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 
 </a>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
